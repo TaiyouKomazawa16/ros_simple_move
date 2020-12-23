@@ -1,0 +1,7 @@
+geometry_msgs/Twist vel
+float32 dist
+---
+bool finished
+geometry_msgs/Transform pose
+---
+uint32 remaining_steps

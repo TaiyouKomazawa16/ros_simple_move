@@ -1,0 +1,13 @@
+<launch>
+    <arg name="dist" default="1.0"/>
+    <arg name="vel" default="0.11"/>
+    <arg name="times" default="10"/>
+
+    <node pkg="simple_rover_move" type="simple_move_server.py" name="simple_move_server"/>
+    <node pkg="simple_rover_move" type="round_trip.py" name="round_trip_y" output="screen">
+        <param name="axis" value="y"/>
+        <param name="dist" value="$(arg dist)"/>
+        <param name="vel" value="$(arg vel)"/>
+        <param name="times" value="$(arg times)"/>
+    </node>
+</launch>
